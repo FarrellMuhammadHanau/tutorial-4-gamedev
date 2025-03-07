@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://k1a26e23aa7y"]
+
+[ext_resource type="Script" path="res://scenes/Level 2/barnacle_missile.gd" id="1_ndjkm"]
+[ext_resource type="Script" path="res://scenes/damage_area.gd" id="1_svchp"]
+[ext_resource type="Texture2D" uid="uid://bhxtw2cvalusj" path="res://assets/kenney_platformerpack/PNG/Enemies/barnacle_attack.png" id="3_jadfh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a6smb"]
+radius = 42.0
+height = 124.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b72t4"]
+
+[node name="BarnacleMissile" type="CharacterBody2D"]
+script = ExtResource("1_ndjkm")
+acceleration = 700
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_svchp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_a6smb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -1)
+shape = SubResource("CircleShape2D_b72t4")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 15)
+rotation = 3.14159
+texture = ExtResource("3_jadfh")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

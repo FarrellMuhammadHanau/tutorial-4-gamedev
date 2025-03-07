@@ -1,9 +1,27 @@
 extends CharacterBody2D
 
+class_name Player
+
 @export var speed: int = 400
 @export var gravity: int = 1200
 @export var jump_speed: int = -400
+@export var health: int = 3
+@export var heart_scene : PackedScene
 
+@onready var health_bar = $HealthBar
+var hearts = []
+
+func take_damage():
+	health -= 1
+	var heart = hearts.pop_back()
+	heart.queue_free()
+	
+func _ready():
+	for i in range(health):
+		var heart = heart_scene.instantiate()
+		health_bar.add_child(heart)
+		heart.position = Vector2(i * 50, 0)
+		hearts.append(heart)		
 
 func get_input():
 	velocity.x = 0
