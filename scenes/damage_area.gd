@@ -4,8 +4,8 @@ extends Area2D
 
 func _on_body_entered(body: Node) -> void:
 	if body.get_name() == "Player":
-		body.take_damage()
-		if body.health <= 0:
-			get_tree().change_scene_to_file(str("res://scenes/" + sceneName + ".tscn"))
+		global.lives -= 1
+		if global.lives <= 0:
+			get_tree().call_deferred("change_scene_to_file", str("res://scenes/" + sceneName + ".tscn"))
 			
 	get_parent().queue_free()

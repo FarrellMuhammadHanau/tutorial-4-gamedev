@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=4 uid="uid://yqmk0vpvnyxr"]
+[gd_scene load_steps=10 format=4 uid="uid://yqmk0vpvnyxr"]
 
 [ext_resource type="PackedScene" uid="uid://bc2fujtl13g10" path="res://scenes/Player.tscn" id="1"]
-[ext_resource type="Script" path="res://scenes/level_1.gd" id="1_0asf6"]
 [ext_resource type="Texture2D" uid="uid://76hi8rt1miuo" path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_gr_grass.png" id="2_ivy3g"]
 [ext_resource type="Texture2D" uid="uid://chgqimvh7rdh6" path="res://assets/Familiar Looking Rocket.png" id="3_wo7sm"]
 [ext_resource type="PackedScene" uid="uid://t8mo6p52q7ig" path="res://scenes/Area Trigger.tscn" id="4_5ivy3"]
@@ -55,7 +54,6 @@ physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_00us6")
 
 [node name="Level1" type="Node2D"]
-script = ExtResource("1_0asf6")
 
 [node name="Player" parent="." instance=ExtResource("1")]
 position = Vector2(445, 209)
@@ -80,7 +78,7 @@ sceneName = "Level 2/Level2"
 [node name="LoseArea" parent="." instance=ExtResource("4_5ivy3")]
 position = Vector2(452, 672)
 scale = Vector2(100, 1)
-sceneName = "Level1"
+sceneName = "LoseScreen"
 
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(850, -516)
@@ -93,4 +91,3 @@ obstacle = ExtResource("6_kwlra")
 offset_left = -1.0
 offset_top = 1.0
 offset_bottom = 24.0
-metadata/_edit_use_anchors_ = true

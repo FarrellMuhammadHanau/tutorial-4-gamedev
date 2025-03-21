@@ -11,9 +11,18 @@ config_version=5
 [application]
 
 config/name="Tutorial 4 Template"
-run/main_scene="res://scenes/Level1.tscn"
+run/main_scene="res://scenes/Tutorial 6/MainMenu.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.png"
+
+[autoload]
+
+global="*res://scripts/global.gd"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [input]
 

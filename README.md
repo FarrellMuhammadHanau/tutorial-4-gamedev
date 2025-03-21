@@ -1,4 +1,4 @@
-# Implementasi Pada level baru:
+# Tutorial 4:
 	
 ## Platform dan air yang menyatu
 Saya menggunakan 2 buah TileMapLayer agar platform dan air terlihat menyatu dengan platform. Berdasarkan [sumber](https://www.youtube.com/watch?v=o2OzgXYbkPY), kita dapat mengatur z index dari TileSet untuk mengatur Tile mana yang berada diatas atau bawah.
@@ -17,3 +17,13 @@ Saya menggunakan 2 buah TileMapLayer agar platform dan air terlihat menyatu deng
 4. Menginstansiasi node heart dengan PackedScene sebanyak jumlah health lalu mengatur posisi heart dari kiri ke kanan di dalam node HealthBar. Setelah itu tiap node heart disimpan didalam list of heart secara berurutan agar dapat dipop dari kanan ke kiri. 
 5. Menambahkan method take_damage untuk mengurangi health dan pop list of heart.
 6. Menambahkan pemanggilan method take_damage pada signal on_body_entered di dalam script Area2D milik FallingFish dan BarnacleMissile agar setiap terkena kedua node tersebut, maka health Player akan berkurang.
+
+# Tutorial 6
+## Game Over
+1. Menambahkan tombol back to main menu untuk kembali ke main menu
+2. Menambahkan tombol new game untuk memulai game dari level 1
+3. Menambahkan tombol restart untuk restart level ini
+
+## Stage Selection
+1. Menambahkan tombol untuk ke scene level 1
+2. Menambahkan tombol untuk ke scene level 2

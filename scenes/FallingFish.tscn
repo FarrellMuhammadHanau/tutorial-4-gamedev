@@ -25,6 +25,7 @@ disabled = true
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("3_b354h")
+sceneName = "Tutorial 6/Game Over"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_r1fns")
